@@ -1,0 +1,27 @@
+/* #bg_grad {
+  background-image: linear-gradient(
+    to bottom,
+    #285fa5,
+    #2765ac,
+    #266bb3,
+    #2572b9,
+    #2378c0,
+    #1784c9,
+    #0891d2,
+    #009dd9,
+    #00b1dd,
+    #00c2d0,
+    #00d1b2,
+    #2edc8a
+  );
+} */
+
+#bg_grad {
+  background: rgb(159, 191, 246);
+  background: radial-gradient(
+    circle,
+    rgba(159, 191, 246, 1) 0%,
+    rgba(32, 129, 201, 1) 16%,
+    rgba(40, 95, 165, 1) 39%
+  );
+}
