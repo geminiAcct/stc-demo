@@ -16,15 +16,6 @@ COPY . .
 # Build the React application with Vite
 RUN npm run build
 
-# Use lightweight Node.js LTS image for production
-FROM node:22-alpine3.19
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy only the built files from the previous stage
-COPY --from=builder /app/dist /app/dist
-
 # Expose the port the app runs on
 EXPOSE 3000
 
