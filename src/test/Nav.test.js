@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Nav from "../sections/Nav";
+import Nav from "./Nav"; // Assuming your `Nav` component is in the same directory
 
 // Mock `Button` component (if necessary):
-jest.mock("../components/Button", () => ({
+vi.mock("../components/Button", () => ({
   __esModule: true,
   default: jest.fn(() => <button>Contact Us</button>),
 })); // Replace with appropriate mock implementation
@@ -15,7 +15,7 @@ describe("Nav component", () => {
     ];
 
     // Mock `navlink` constant (if it's not an array):
-    jest.mock("../constants", () => ({
+    vi.mock("../constants", () => ({
       navlink: mockNavLinks,
     }));
 
