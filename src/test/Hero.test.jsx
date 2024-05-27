@@ -3,8 +3,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Hero from "../sections/Hero";
 
-jest.mock("../components/Button", () => ({ Button: jest.fn() })); // Mock Button component
-
 test("renders Hero component with correct structure", () => {
   render(<Hero />);
 
