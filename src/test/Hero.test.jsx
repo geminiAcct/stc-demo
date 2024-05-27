@@ -1,7 +1,7 @@
 // Hero.test.js
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Hero from "./Hero"; // Assuming Hero is in the same directory
+import Hero from "../sections/Hero";
 
 jest.mock("../components/Button", () => ({ Button: jest.fn() })); // Mock Button component
 
