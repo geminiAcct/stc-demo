@@ -1,37 +1,36 @@
+// Hero.test.js
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Hero from "../sections/Hero"; // Assuming Hero is in the same directory
+import Hero from "./Hero"; // Assuming Hero is in the same directory
 
-jest.mock("react-lottie", () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
+jest.mock("../components/Button", () => ({ Button: jest.fn() })); // Mock Button component
 
-describe("Hero component", () => {
-  it("renders background image and button correctly", () => {
-    render(<Hero />);
+test("renders Hero component with correct structure", () => {
+  render(<Hero />);
 
-    // Background image (using CSS selectors)
-    const backgroundImage = screen.getByStyle(
-      `background-image: url("${process.env.PUBLIC_URL}/assets/images/hero.jpg")` // Assuming hero image is named hero.jpg
-    );
-    expect(backgroundImage).toBeInTheDocument();
+  // Assert overall structure
+  const heroSection = screen.getByTestId("hero-section"); // Add data-testid to Hero for easier selection
+  expect(heroSection).toBeInTheDocument();
+  expect(heroSection).toHaveClass(
+    "flex flex-row bg-stc-hero bg-cover bg-no-repeat h-screen"
+  );
 
-    // Button
-    const button = screen.getByRole("button", { name: /Explore/i });
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveStyle({ backgroundColor: "green" }); // Assuming green button background
+  // Assert left section
+  const leftSection = screen.getByRole("region"); // Assuming left section has a semantic role
+  expect(leftSection).toBeInTheDocument();
+  expect(leftSection).toHaveClass("w-[50%] h-screen");
+
+  // Assert Button component (using mock)
+  expect(Button).toHaveBeenCalledWith({
+    name: "Explore",
+    bg_color: "bg-green",
+    destination: "#services",
   });
 
-  it("renders Lottie animation correctly", () => {
-    render(<Hero />);
+  // Assert right section (basic structure for now)
+  const rightSection = screen.getAllByRole("region")[1]; // Assuming right section has a semantic role
+  expect(rightSection).toBeInTheDocument();
+  expect(rightSection).toHaveClass("w-[50%] flex justify-start items-center");
 
-    const lottie = screen.getByTestId("lottie-animation"); // Add data-testid for clear identification
-    expect(lottie).toBeInTheDocument();
-
-    // Verify Lottie mock function call (optional)
-    expect(reactLottieMock).toHaveBeenCalledWith(expect.any(), expect.any());
-  });
+  // Consider adding tests for Lottie animation existence and behavior based on your implementation
 });
-
-const reactLottieMock = jest.mocked(Lottie, "default"); // Mock Lottie for animation testing (optional)
