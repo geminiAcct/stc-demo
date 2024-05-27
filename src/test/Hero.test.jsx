@@ -1,34 +1,31 @@
 // Hero.test.js
-import React from "react";
-import { render, screen } from "@testing-library/react";
 import Hero from "../sections/Hero";
+import { render } from "@testing-library/react";
 
-test("renders Hero component with correct structure", () => {
-  render(<Hero />);
+describe("Hero component", () => {
+  it("should render the structure with two sections", () => {
+    const { getByTestId } = render(<Hero />);
 
-  // Assert overall structure
-  const heroSection = screen.getByTestId("hero-section"); // Add data-testid to Hero for easier selection
-  expect(heroSection).toBeInTheDocument();
-  expect(heroSection).toHaveClass(
-    "flex flex-row bg-stc-hero bg-cover bg-no-repeat h-screen"
-  );
+    const section1 = getByTestId("hero-section-1");
+    const section2 = getByTestId("hero-section-2");
 
-  // Assert left section
-  const leftSection = screen.getByRole("region"); // Assuming left section has a semantic role
-  expect(leftSection).toBeInTheDocument();
-  expect(leftSection).toHaveClass("w-[50%] h-screen");
-
-  // Assert Button component (using mock)
-  expect(Button).toHaveBeenCalledWith({
-    name: "Explore",
-    bg_color: "bg-green",
-    destination: "#services",
+    expect(section1).toBeInTheDocument();
+    expect(section2).toBeInTheDocument();
   });
 
-  // Assert right section (basic structure for now)
-  const rightSection = screen.getAllByRole("region")[1]; // Assuming right section has a semantic role
-  expect(rightSection).toBeInTheDocument();
-  expect(rightSection).toHaveClass("w-[50%] flex justify-start items-center");
+  it("should render a button element with Explore text", () => {
+    const { getByText } = render(<Hero />);
 
-  // Consider adding tests for Lottie animation existence and behavior based on your implementation
+    const button = getByText("Explore");
+
+    expect(button).toBeInTheDocument();
+  });
+
+  it("should render a Lottie animation container", () => {
+    const { getByTestId } = render(<Hero />);
+
+    const animation = getByTestId("hero-animation");
+
+    expect(animation).toBeInTheDocument();
+  });
 });
