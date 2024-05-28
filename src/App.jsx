@@ -32,9 +32,9 @@ function App() {
       <section className="bg-bg-test3" id="about">
         <About />
       </section>
-      <section id="contact-us">
+      {/* <section id="contact-us">
         <Contact />
-      </section>
+      </section> */}
     </>
   );
 }
