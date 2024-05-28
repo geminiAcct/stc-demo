@@ -16,8 +16,14 @@ COPY . .
 # Build the React application with Vite
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3000
+# Stage 2: Serve the application using Nginx
+FROM nginx:alpine
 
-# Command to run the application
-CMD ["serve", "-s", "dist", "-l", "3000"]
+# Copy the built files from the builder stage to Nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Run Nginx in the foreground (daemon off)
+CMD ["nginx", "-g", "daemon off;"]
