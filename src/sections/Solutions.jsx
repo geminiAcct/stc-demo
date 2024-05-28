@@ -5,7 +5,7 @@ const Solutions = () => {
   return (
     <div className="py-10 ">
       <div className="flex justify-center">
-        <h1 className="text-black text-4xl font-roboto font-semibold">
+        <h1 className="text-black text-4xl font-roboto font-semibold uppercase">
           Our Solutions
         </h1>
       </div>

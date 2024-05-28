@@ -23,7 +23,7 @@ function App() {
       <section id="services">
         <Services />
       </section>
-      <section className=" bg-bg-test2 bg-cover" id="partners">
+      <section className="bg-bg-test2 bg-cover" id="partners">
         <Partners />
       </section>
       <section className="bg-dark_white bg-cover " id="solutions">
