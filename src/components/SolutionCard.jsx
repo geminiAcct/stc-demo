@@ -3,13 +3,13 @@ import { solutionsOffer } from "../constants";
 
 const SolutionCard = () => {
   return (
-    <div className=" w-[85%] bg-bg-test">
+    <div className=" w-[85%]">
       <div className="flex flex-1 flex-col gap-10 grid grid-cols-2 gap-4 ">
         {solutionsOffer.map((solution, index) => (
           <div
             className={`flex flex-1 flex-col gap-2 justify-start items-center transition
-             ease-in-out delay-150 hover:-translate-y-1 text-white hover:text-black hover:scale-110 
-              hover:bg-white duration-300 py-5 rounded-md bg-secondary ${
+             ease-in-out delay-150 hover:-translate-y-1 text-black hover:text-white hover:scale-110 
+              hover:bg-secondary duration-300 py-5 rounded-md bg-white ${
                 index === 1 || index === 3 ? "flex-row-reverse" : "flex-row"
               } px-10`}
             key={solution.id} // Add a unique key

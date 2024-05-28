@@ -26,10 +26,10 @@ function App() {
       <section className=" bg-bg-test2 bg-cover" id="partners">
         <Partners />
       </section>
-      <section className="bg-bg-test bg-cover" id="solutions">
+      <section className="bg-dark_white bg-cover " id="solutions">
         <Solutions />
       </section>
-      <section className="bg-bg-test3" id="about">
+      <section className="bg-bg-test bg-cover" id="about">
         <About />
       </section>
       {/* <section id="contact-us">

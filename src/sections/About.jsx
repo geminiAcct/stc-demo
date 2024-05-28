@@ -6,9 +6,11 @@ const About = () => {
   return (
     <div className="flex flex-col px-[100px] py-10 gap-5">
       <div>
-        <h1 className="font-roboto font-semibold text-4xl">About Us</h1>
+        <h1 className="font-roboto font-semibold text-4xl text-white">
+          About Us
+        </h1>
       </div>
-      <div className="bg-dark_white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-5 py-5">
+      <div className="bg-secondary rounded-lg shadow text-white px-5 py-5">
         {about_us.length > 0 && (
           <p>
             {about_us.map((about, index) =>
@@ -26,7 +28,7 @@ const About = () => {
             <p className=" w-full flex flex-row w-full gap-5 ">
               {about_us.slice(1, 5).map((about, index) => (
                 <span
-                  className="w-full py-5 px-5 bg-dark_white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
+                  className="w-full py-5 px-5 bg-secondary  rounded-lg shadow text-white "
                   key={index}
                 >
                   {about.content}
