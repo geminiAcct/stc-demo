@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="flex flex-col px-[100px] py-10 gap-5">
       <div>
-        <h1 className="font-roboto font-semibold text-4xl text-white">
+        <h1 className="font-roboto font-semibold text-3xl text-white uppercase">
           About Us
         </h1>
       </div>
