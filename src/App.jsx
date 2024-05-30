@@ -15,7 +15,7 @@ function App() {
         <Nav />
       </header>
       <section
-        className="bg-stc-hero bg-cover bg-no-repeat h-screen index-10"
+        className="bg-stc-hero bg-coverb bg-no-repeat h-screen index-10"
         id="home"
       >
         <Hero />
