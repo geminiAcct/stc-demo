@@ -15,7 +15,7 @@ function App() {
         <Nav />
       </header>
       <section
-        className="bg-stc-hero bg-coverb bg-no-repeat h-screen index-10"
+        className="bg-stc-hero bg-coverbbg-no-repeat h-screen index-10"
         id="home"
       >
         <Hero />
@@ -32,9 +32,9 @@ function App() {
       <section className="bg-bg-test bg-cover" id="about">
         <About />
       </section>
-      {/* <section id="contact-us">
+      <section id="contact-us">
         <Contact />
-      </section> */}
+      </section>
     </>
   );
 }
