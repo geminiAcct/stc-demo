@@ -6,7 +6,7 @@ const Solutions = () => {
     <div className="py-10 ">
       <div className="flex justify-center">
         <h1 className="text-black text-3xl font-roboto font-semibold uppercase">
-          our solutions
+          our solutionss
         </h1>
       </div>
       <div className="flex flex-1 justify-center py-10 ">
