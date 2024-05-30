@@ -8,7 +8,7 @@ export const Partners = () => {
       id="partners"
     >
       <h1 className="text-3xl font-roboto font-semibold uppercase">
-        Our trusted partners
+        our trusted partners
       </h1>
       <Tabs tabs={products} />
     </div>
