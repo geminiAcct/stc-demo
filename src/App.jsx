@@ -7,6 +7,7 @@ import {
   Solutions,
   About,
   Contact,
+  Footer,
 } from "./sections";
 function App() {
   return (
@@ -20,21 +21,24 @@ function App() {
       >
         <Hero />
       </section>
-      <section id="services">
+      {/* <section id="services">
         <Services />
-      </section>
-      <section className="bg-bg-test2 bg-cover" id="partners">
-        <Partners />
-      </section>
+      </section> */}
       <section className="bg-dark_white bg-cover " id="solutions">
         <Solutions />
+      </section>
+      <section className="bg-dark_white" id="partners">
+        <Partners />
       </section>
       <section className="bg-bg-test bg-cover" id="about">
         <About />
       </section>
-      <section id="contact-us">
+      <section id="contact-us" className="bg-dark_white">
         <Contact />
       </section>
+      <footer className="bg-black">
+        <Footer />
+      </footer>
     </>
   );
 }

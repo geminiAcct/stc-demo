@@ -8,7 +8,7 @@ const Tabs = ({ tabs }) => {
   };
 
   return (
-    <div className="justify-center gap-5 flex flex-row w-full h-[65%]">
+    <div className="justify-center gap-5 flex flex-row w-full h-[65%] text-black_text">
       <ul className="grid grid-cols-2 gap-3 ">
         {tabs.map((tab, index) => (
           <li

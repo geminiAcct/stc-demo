@@ -1,24 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import { solutionsOffer } from "../constants";
+import { infrastructure } from "../assets/images";
 
-const SolutionCard = () => {
+const SolutionCard = ({ solutions }) => {
+  const [activeSolution, setActiveSolution] = useState(0);
+
+  const handleClick = (index) => {
+    setActiveSolution(index);
+  };
+
   return (
-    <div className=" w-[85%]">
-      <div className="flex flex-1 flex-col gap-10 grid grid-cols-2 gap-4 ">
-        {solutionsOffer.map((solution, index) => (
+    <div className="py-10 space-y-5">
+      <div className="flex flex-1 space-x-4">
+        {solutions.map((solution, index) => (
           <div
-            className={`flex flex-1 flex-col gap-2 justify-start items-center transition
-             ease-in-out delay-150 hover:-translate-y-1 text-black hover:text-white hover:scale-110 
-              hover:bg-secondary duration-300 py-5 rounded-md bg-white ${
-                index === 1 || index === 3 ? "flex-row-reverse" : "flex-row"
-              } px-10`}
-            key={solution.id} // Add a unique key
+            className={`flex flex-1 bg-white text-black_text rounded-full items-center justify-center gap-2 py-2 shadow-md cursor-pointer
+             ${
+               activeSolution === index
+                 ? "active border-2 border-green ease-in duration-200 delay-75"
+                 : "border-2 border-white ease-out duration-200  delay-75"
+             }`}
+            onClick={() => handleClick(index)}
           >
-            <img className="w-[40%]" src={solution.logo} alt="logo" />
-            <span className="flex flex-1 flex-col gap-5 justify-start items-center  text-wrap ">
-              <h2 className=" font-roboto text-3xl">{solution.title}</h2>
-              <p className={`font-montserrat text-sm`}>{solution.content}</p>
-            </span>
+            <img src={solution.logo} alt="logo" width="15%" className="" />
+            <p
+              key={index}
+              className="text-xl font-roboto font-medium text-black_text"
+            >
+              {solution.title}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        {solutions.map((solution, index) => (
+          <div
+            key={index}
+            className={`tabs__content-item   flex items-center space-x-4 bg-white rounded-lg drop-shadow-lg ${
+              activeSolution === index
+                ? "active ease-in duration-200 delay-75"
+                : "hidden"
+            }`}
+          >
+            <div className="space-y-5 w-[50%] p-5">
+              <h2
+                className="font-roboto font-semibold text-3xl bg-gradient-to-r 
+              from-primary from-40% via-sky-500 via-40% to-secondary to-20%  text-transparent bg-clip-text"
+              >
+                {solution.subtitle}
+              </h2>
+              <p className="font-montserrat">{solution.content}</p>
+            </div>
+            <div className="w-[50%] ">
+              <img
+                src={solution.picture}
+                alt="infra"
+                className="rounded-r-lg"
+              />
+            </div>
           </div>
         ))}
       </div>

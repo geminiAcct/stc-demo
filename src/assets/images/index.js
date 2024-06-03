@@ -11,6 +11,12 @@ import c_3 from "./3.jpg";
 import c_4 from "./4.jpg";
 import c_5 from "./5.jpg";
 import hero_animation from "./hero_animation";
+import right_arrow from "./right-arrow.png";
+import fb from "./facebook.png";
+import infrastructure from "./infra.jpg";
+import cloudSec from "./cloud.jpg";
+import endToEnd from "./end-to-end.jpg";
+import productivitySol from "./productivity.jpg";
 export {
   logo,
   hero_image,
@@ -25,4 +31,10 @@ export {
   c_4,
   c_5,
   hero_animation,
+  right_arrow,
+  fb,
+  infrastructure,
+  cloudSec,
+  endToEnd,
+  productivitySol,
 };

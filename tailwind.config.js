@@ -12,7 +12,7 @@ export default {
         green: "#2edc8a",
         white: "#f5f5f5",
         dark_white: "#ebebeb",
-        black: "#292929",
+        black_text: "#292929",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
