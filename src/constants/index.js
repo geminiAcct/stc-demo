@@ -1,4 +1,10 @@
-import { solutions, services, partners, logo } from "../assets/images";
+import {
+  solutions,
+  services,
+  partners,
+  logo,
+  hero_image,
+} from "../assets/images";
 import {
   citrix,
   autodesk,
@@ -11,6 +17,16 @@ import {
   qualys,
   vectra,
   trend,
+  quantom,
+  veritas,
+  fireEye,
+  checkPoint,
+  darkTrace,
+  broadcom,
+  nintex,
+  vmWare,
+  impreva,
+  gold,
 } from "../assets/partners";
 
 import { cloud, infra, end_to_end, productivity } from "../assets/solutions";
@@ -56,68 +72,85 @@ export const products = [
   {
     logo: citrix,
     title: "Citrix",
-    content:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
+    width: "70%",
   },
   {
     logo: autodesk,
     title: "AUTODESK",
-    content:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+    width: "61%",
   },
   {
     logo: ms_work,
     title: "MS Modern Work",
-    content:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur",
   },
   {
     logo: ms_infra,
     title: "MS Infrastructure Azure",
-    content:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure.",
   },
   {
     logo: ms_digit_app,
     title: "MS Digital & App Inno azure",
-    content:
-      " But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains",
   },
   {
     logo: menlo,
     title: "Menlo",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    width: "40%",
   },
   {
     logo: watchguard,
     title: "WatchGuard",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
   {
     logo: RSA,
     title: "RSA",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
   {
     logo: qualys,
     title: "Qualys",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
   {
     logo: vectra,
     title: "Vectra",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
   },
   {
-    logo: trend,
+    logo: quantom,
     title: "Trend Micro",
-    content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+  },
+  {
+    logo: veritas,
+    title: "Trend Micro",
+  },
+  {
+    logo: fireEye,
+    title: "Trend Micro",
+  },
+  {
+    logo: checkPoint,
+    title: "Trend Micro",
+  },
+  {
+    logo: darkTrace,
+    title: "Trend Micro",
+  },
+  {
+    logo: broadcom,
+    title: "Trend Micro",
+  },
+  {
+    logo: nintex,
+    title: "Trend Micro",
+  },
+  {
+    logo: vmWare,
+    title: "Trend Micro",
+  },
+  {
+    logo: impreva,
+    title: "Trend Micro",
+  },
+  {
+    logo: gold,
+    title: "Trend Micro",
   },
 ];
 
@@ -130,6 +163,7 @@ export const solutionsOffer = [
       "Our solutions in this area build on the Microsoft infrastructure stack, which is the most widely used core-infrastructure platform worldwide today. Shellsoft is the top core infrastructure partner in the country for the past few years, combining world-class skills with the experience gained from deploying for a lot of the top corporations in the country.",
     logo: infra,
     picture: infrastructure,
+    width: "50%",
   },
   {
     id: 2,
@@ -139,13 +173,15 @@ export const solutionsOffer = [
       "Virtualization is the backbone of cloud implementation, and we are one of the few in the Philippines with combined expertise in the most widely used virtualization platforms today (Microsoft, Citrix, VMware). We also provide storage solutions for the ever growing amount of data generated by cloud and enterprise implementations.",
     logo: cloud,
     picture: cloudSec,
+    width: "50%",
+    height: "500rem",
   },
   {
     id: 3,
     title: "End-to-End",
     subtitle: "End-to-End Security",
     content:
-      "Shellsoft is a leading security consultant and systems integrator trusted by vendors and customers across all verticals. Our Adaptive Security portfolio protects against multiple threat vectors and addresses the threat landscape evolution. The breadth of the portfolio is complemented by the scalability on resources and depth of the skills to deploy solutions, to support, and to manage complex network infrastructure environments. We also provide consulting services such as security posture assessment aligned to NIST framework, gap analysis, and roadmap recommendations mapped to CIS controls.",
+      "Shellsoft offers cutting-edge security solutions tailored to evolving threat landscapes. Our Adaptive Security portfolio, paired with extensive consulting services, ensures robust protection aligned with industry standards. Leveraging the Microsoft infrastructure stack, we provide scalable and efficient solutions, backed by years of top-tier partnership and deployment experience.",
     logo: end_to_end,
     picture: endToEnd,
   },
