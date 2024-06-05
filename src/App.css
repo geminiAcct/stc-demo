@@ -16,6 +16,11 @@
   );
 } */
 
+#max-size {
+  width: 1280px;
+  height: 100vh;
+}
+
 #bg_grad {
   background: rgb(159, 191, 246);
   background: radial-gradient(
