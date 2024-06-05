@@ -1,28 +1,56 @@
 import Tabs from "../components/Tab";
 import { products } from "../constants";
 
-export const Partners = () => {
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+export const Partners = ({ Swiper, SwiperSlide, Autoplay, EffectFade }) => {
   return (
-    <div className=" flex flex-col gap-10	 px-[50px] pb-[100px] " id="partners">
-      <h1 className="text-3xl text-black_text font-roboto font-semibold uppercase">
-        our trusted partners
-      </h1>
-      {/* <Tabs tabs={products} /> */}
-      <div className="grid grid-rows-3 grid-flow-col space-y-2 gap-2">
-        {products.map((product, index) => (
-          <div className=" text-primary">
-            <h2 className="font-montserrat font-bold text-2xl uppercase">
-              {product.title}
-            </h2>
-
-            {/* <img
-              src={product.logo}
-              alt="partner's logo"
-              width="20%"
-              className="hidden group-hover:block"
-            /> */}
-          </div>
-        ))}
+    <div
+      className="space-y-10 px-[50px] h-screen flex flex-col justify-center place-self-center"
+      id="partners"
+    >
+      <div className="font-montserrat text-black_text space-y-2 text-center">
+        <h1
+          className="bg-gradient-to-r 
+              from-primary from-50% via-sky-500 via-30% to-secondary to-20%  text-transparent bg-clip-text
+               text-xl font-bold uppercase"
+        >
+          our trusted partners
+        </h1>
+        <h1 className="text-5xl font-bold">
+          Together with industry <br />
+          experts, we deliver.
+        </h1>
+        <p>
+          From cutting-edge solutions to unparalleled expertise, our partners
+          extend our reach and empower you to achieve more.
+        </p>
+      </div>
+      <div>
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={30}
+          runCallbacksOnInit={true}
+          speed={1000}
+          loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: true,
+          }}
+          modules={[Autoplay, EffectFade]}
+          className="mySwiper"
+        >
+          {products.map((product, index) => (
+            <SwiperSlide className="flex place-self-center">
+              <img
+                src={product.logo}
+                alt="partner's logo"
+                width={product.width}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
