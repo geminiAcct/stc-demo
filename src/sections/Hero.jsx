@@ -26,8 +26,8 @@ const Hero = () => {
         flex flex-col justify-center items-center"
         >
           <div className="flex">
-            <img src={stc_bg} alt="" height={15} width={105} />
-            <h1>ne</h1>
+            {/* <img src={stc_bg} alt="" height={15} width={105} /> */}
+            <h1>one</h1>
           </div>
           <h1>shellsoft</h1>
           <p className="text-sm font-medium">Techonology Corporation</p>
