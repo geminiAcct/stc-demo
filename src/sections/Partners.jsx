@@ -31,6 +31,7 @@ export const Partners = ({ Swiper, SwiperSlide, Autoplay, EffectFade }) => {
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
+          allowTouchMove={false}
           runCallbacksOnInit={true}
           speed={1000}
           loop={true}

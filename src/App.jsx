@@ -18,7 +18,7 @@ function App() {
       <header className="sticky top-0 z-50 ">
         <Nav />
       </header>
-      <section className=" h-screen index-10" id="home">
+      <section className=" index-10" id="home">
         <Hero />
       </section>
       {/* <section id="services">
@@ -40,7 +40,7 @@ function App() {
           EffectFade={EffectFade}
         />
       </section>
-      <section className="bg-bg-test bg-no-repeat bg-cover" id="about">
+      <section className="bg-dark_white" id="about">
         <About />
       </section>
       <section id="contact-us" className="bg-dark_white">

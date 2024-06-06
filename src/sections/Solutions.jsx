@@ -4,7 +4,7 @@ import { offers, solutionsOffer } from "../constants";
 
 const Solutions = ({ Swiper, SwiperSlide, Pagination, Mousewheel }) => {
   return (
-    <div className="pt-14 px-[100px] space-y-5 h-screen">
+    <div className="pt-14 px-[100px] space-y-5 h-screen ">
       <div className="text-center text-black_text font-montserrat space-y-2">
         <h1
           className=" bg-gradient-to-r 
@@ -19,7 +19,7 @@ const Solutions = ({ Swiper, SwiperSlide, Pagination, Mousewheel }) => {
           security and architecture and engineering solutions
         </p>
       </div>
-      <div className="flex flex-1 justify-center h-[25rem] z-100 bg-blue-500 rounded-lg">
+      <div className="flex flex-1 justify-center h-[25rem] z-100 half_spiral rounded-lg">
         <Swiper
           direction={"vertical"}
           slidesPerView={1}
@@ -29,7 +29,7 @@ const Solutions = ({ Swiper, SwiperSlide, Pagination, Mousewheel }) => {
             clickable: true,
           }}
           modules={[Mousewheel, Pagination]}
-          className="mySwiper"
+          className="mySwiper backdrop-blur-md	rounded-lg"
         >
           {solutionsOffer.map((solution, index) => (
             <SwiperSlide

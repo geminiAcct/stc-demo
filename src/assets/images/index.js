@@ -17,6 +17,9 @@ import infrastructure from "./infra.jpg";
 import cloudSec from "./cloud.jpg";
 import endToEnd from "./end-to-end.jpg";
 import productivitySol from "./productivity.jpg";
+import more_arrow from "./arrow-narrow-right.png";
+import about_banner from "./about_banner.jpg";
+import more_arrow_white from "./right-arrow-white.png";
 export {
   logo,
   hero_image,
@@ -37,4 +40,7 @@ export {
   cloudSec,
   endToEnd,
   productivitySol,
+  more_arrow,
+  about_banner,
+  more_arrow_white,
 };
