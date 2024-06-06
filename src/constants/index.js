@@ -199,6 +199,14 @@ export const solutionsOffer = [
 export const about_us = [
   {
     content:
+      "Founded in 1988, Shellsoft provides top-tier productivity, security, and data center solutions. Recognized by Microsoft and Symantec Philippines, they excel in virtualization and core infrastructure. With the largest team of certified engineers in-country, Shellsoft serves leading corporations across diverse industries.",
+  },
+  {
+    content:
+      "Shellsoft positions itself as a one-stop shop for businesses seeking IT solutions. They offer a wide range of services, from core infrastructure and virtualization to security, data management, and endpoint management. Their large team of certified engineers ensures they can handle complex projects simultaneously while providing clients with the best available skills.",
+  },
+  {
+    content:
       "Founded in 1988, Shellsoft's mission is to provide cutting edge productivity, security and data center solutions at great value. In its more than 25 years of existence, Shellsoft has a reputation among its customers of delivering quality installations using best-of-breed products. As a systems integrator for the world's leading technology companies, Shellsoft is in a unique position to understand the needs of our customers and package the right solutions for them.",
   },
   {

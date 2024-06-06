@@ -22,11 +22,15 @@ const Contact = () => {
           href=""
           className="group flex flex-1 justify-center items-center gap-2 hover:text-dark_white"
         >
-          <p className="flex items-center font-roboto text-md">Learn more</p>
+          <p className="flex items-center font-roboto font-semibold text-md">
+            Learn more
+          </p>
           <img
             src={right_arrow}
             alt="arrow"
-            className="w-4 h-4 group-hover:translate-x-[-3rem] transition-transform"
+            className=" group-hover:translate-x-[-3rem] transition-transform"
+            width={25}
+            height={10}
           />
         </a>
       </div>
