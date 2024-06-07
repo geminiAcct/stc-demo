@@ -72,6 +72,7 @@
 }
 
 .half_spiral {
+  /* Existing styles for the spiral pattern */
   background-image: repeating-radial-gradient(
       circle at 0 0,
       transparent 0,
@@ -79,6 +80,19 @@
     ),
     repeating-linear-gradient(#474bff, #474bff);
   background-color: #47d3ff;
+
+  /* Animation properties for background movement */
+  animation: moveSpiral 4s linear infinite;
+  /* Ensure background is larger than element */
+}
+
+@keyframes moveSpiral {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 100px 100px; /* Adjust values for desired spiral path */
+  }
 }
 
 .hero_spiral {
