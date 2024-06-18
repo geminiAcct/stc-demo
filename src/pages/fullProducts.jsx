@@ -4,4 +4,4 @@ const fullProducts = () => {
   return <div>fullProducs</div>;
 };
 
-export default fullProducts;
+export default fullProductss;
